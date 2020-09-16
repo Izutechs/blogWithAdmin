@@ -1,0 +1,90 @@
+.postImg{
+    width: 30%;
+    height: 30%;
+    margin-left: 35%;
+}
+.postdiv{
+    background-color: #f1f1f2;
+    width: 90%;
+    margin-left: 5%;
+}
+.postline{
+    width: 90%;
+    margin-left: 5%;
+   
+    border: solid 2px #404041;
+}
+.postContent{
+    width: 96%;
+    margin-left: 2%;
+}
+.postName{
+    text-align: center;
+}
+.delete{
+    width: 90px;
+    display: flex;
+    padding-top: 10px;
+    justify-content: space-evenly;
+    height: 30px;
+    background-color: rgb(10, 10, 8);
+    border: none;
+    border-radius: 3px;
+    color: white;
+    cursor: pointer;
+    
+}
+.delete:hover{
+    color: rgb(10, 10, 8);
+    background-color: white
+}
+.author{
+    font-weight: bold;
+}
+
+.socialList{
+    display: inline;
+    text-align: left;
+}
+.commentInp{
+    width: 30%;
+}
+.commentInput{
+    width: 70%;
+    height: 150px;
+    max-width: 70%;
+    max-height: 150px;
+    min-width: 70%;
+    min-height: 150px;
+}
+.submitComment{
+    
+    height: 30px;
+    background-color: rgb(10, 10, 8);
+    border: none;
+    border-radius: 3px;
+    color: white;
+}
+.submitComment:hover{
+    color: rgb(10, 10, 8);
+    background-color: white
+}
+.comments{
+    border: solid 2px rgb(10, 10, 8);
+    background-color: white
+}
+.commentTitle{
+    margin-left: 2%;
+}
+.userwCom{
+    margin-left: 2%;
+    color: #fbaf3f
+}
+.aComment{
+    margin-left: 2%;
+}
+.lineShare{
+    border-top: solid 2px rgb(10, 10, 8);
+    width: 70%;
+    margin-left: 2%;
+}

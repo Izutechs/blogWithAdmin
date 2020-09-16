@@ -1,0 +1,60 @@
+.content{
+    width: 80%;
+    margin-left: 10%;
+    background-color: #f1f1f2;
+    
+}
+.login-form{
+   width: 60%;
+  
+    margin-left: 20%;
+   
+}
+.formhead{
+    text-align: center;
+    color: #fbaf3f;
+}
+.loginLabel{
+    margin-left: 5%;
+}
+.loginInput{
+    margin-left: 5%;
+    width: 90%;
+    height: 30px;
+    border: solid 2px #fbaf3f;
+}
+.loginFormBut{
+    text-align: center;
+}
+.loginFormButton{
+    width: 50%;
+    height: 35px;
+    border: none;
+    background-color: #fbaf3f;
+    color: white;
+}
+.loginFormButton:hover{
+   
+    background-color: rgb(10, 10, 8);
+    color: white;
+}
+.loginLinkTxt{
+    text-align: center;
+}
+.loginLink{
+    color: #fbaf3f;
+    text-decoration: none;
+    
+}
+
+
+/* mobile login view */
+
+@media screen and (max-width: 400px){
+    .login-form{
+        width: 86%;
+       
+         margin-left: 7%;
+        
+     }
+}

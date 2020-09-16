@@ -1,0 +1,66 @@
+.content{
+    width: 80%;
+    margin-left: 10%;
+    background-color: #f1f1f2;
+    
+}
+.blog-form{
+    width: 60%;
+   
+     margin-left: 20%;
+    
+ }
+ .formhead{
+    text-align: center;
+    color: #fbaf3f;
+}
+
+.blogLabel{
+    margin-left: 5%;
+}
+.blogInput{
+    width: 90%;
+    margin-left: 5%;
+   
+    height: 30px;
+    border: solid 1px #fbaf3f;
+}
+
+.txtara{
+    margin-left: 5%;
+    width: 90%;
+    height: 60px;
+    min-height: 60px;
+    min-width: 90%;
+    max-height: 60px;
+    max-width: 90%;
+   
+    border: solid 2px #fbaf3f;
+}
+
+.blogFormBut{
+    text-align: center;
+}
+.blogFormButton{
+    width: 50%;
+    height: 35px;
+    border: none;
+    background-color: #fbaf3f;
+    color: white;
+}
+
+.blogFormButton:hover{
+   
+    background-color: rgb(10, 10, 8);
+    color: white;
+}
+/* mobile createpost view */
+
+@media screen and (max-width: 600px){
+    .blog-form{
+        width: 86%;
+       
+         margin-left: 7%;
+        
+     }
+}

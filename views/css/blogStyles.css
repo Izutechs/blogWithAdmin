@@ -1,0 +1,145 @@
+@font-face{
+    font-family: 'Montserrat', sans-serif;
+    src: url(../fonts/Montserrat.otf)format("otf");
+}
+body{
+    background-color: white;
+   font-family: 'Montserrat', sans-serif;
+   font-weight: normal;
+}
+.sitetxt{
+    color: #fbaf3f;
+    text-decoration: none;
+}
+
+/* navbar design */
+
+.line{
+    background-color: #fbaf3f;
+    
+   
+}
+.navbar{
+    text-align: center;
+}
+.navlist{
+    display: inline;
+   
+   margin-right: 5%;
+}
+.navlink{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+
+/* homepage design pc */
+#main{
+    
+    width: 90%;
+    margin-left: 5%;
+    color: #fbaf3f;
+}
+
+.leftSec{
+    
+    float: left;
+    width: 78%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.post{
+    
+    width: 40%;
+    
+}
+.articlePic{
+   
+    width: 100%;
+    height: 50%;
+}
+.bloglink{
+    text-decoration: none;
+    color: #404041;
+}
+
+.rightSec{
+    background-color: red;
+    float: right;
+    width: 20%;
+}
+.aD{
+    width: 100%;
+}
+
+/* mobile view for homepage */
+
+@media screen and (max-width: 600px){
+    .navbar{
+        text-align: center;
+    }
+    .navlist{
+        display: inline;
+       margin-left: 0%;
+       margin-right: 5%;
+       
+    }
+    .navlink{
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+    }
+    #main{
+    
+        width: 90%;
+        margin-left: 5%;
+        color: #fbaf3f;
+    }
+    .leftSec{
+    
+        float: none;
+        width: 100%;
+        display: block
+       
+    }
+    .post{
+    
+        width: 100%;
+        
+    }
+    .articlePic{
+       
+        width: 100%;
+        height: 40%;
+    }
+    .rightSec{
+        background-color: red;
+        float: none;
+        width: 90%;
+        margin-left: 5%;
+    }
+    .aD{
+        width: 100%;
+        height: 300px;
+    }
+}
+
+.footer{
+    width: 90%;
+    position: inherit;
+    bottom: 0;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.horizontalLine{
+    margin-top: 50px;
+    border-top: solid #fbaf3f 2px;
+    width: 70vw;
+    
+}

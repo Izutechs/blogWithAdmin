@@ -1,0 +1,37 @@
+.userProfile{
+    width: 90%;
+    margin-left: 5%;
+}
+.circle{
+    width: 150px;
+    height: 150px;
+    border-radius: 75px;
+    border: solid;
+    border-width: 2px;
+}
+.userImg{
+    width: 150px;
+    height: 150px;
+    border-radius: 75px;
+}
+.eachDetail{
+    color: rgb(10, 10, 8)
+}
+.userDetail{
+    color: #f7931d;
+}
+#upgrade{
+    /* width: 50; */
+    color: white;
+    background-color: rgb(10, 10, 8);
+    height: 30px;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+    /* appearance: none; */
+}
+#upgrade:hover{
+    
+    background-color: #f7931d; 
+    
+}
