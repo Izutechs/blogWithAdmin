@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Izutechs | <%=title  %> </title>
+    <link href="../css/blogStyles.css" rel="stylesheet">
+    <link href="../css/profile.css" rel="stylesheet">
+</head>
+<body>
+    <h1><a href="/" class="sitetxt">Izutechs</a></h1>
+
+   
+    
+   
+       <%-include("./partials/navbar.ejs")%>
+
+  
+
+    
+    
+<br>
+     
+<div class="userProfile">
+
+    <form action="/editProf" method="POST">
+
+        <label for="fullname" class="profileLabel">Upload Profile Picture</label><br>
+        <input type="file" name="profPic" class="profileInp"><br><br>
+        <label for="fullname" class="profileLabel">Fullname</label><br>
+        <input type="text" name="fullname" class="profileInp"><br><br>
+        <label for="fullname" class="profileLabel">Phone Number</label><br>
+        <input type="text" name="phone" class="profileInp" required><br><br>
+        <label for="fullname" class="profileLabel">Country(Not Publicly Visible)</label><br>
+        <input type="text" name="country" class="profileInp" required><br><br>
+        <label for="fullname" class="profileLabel">About Yourself</label><br>
+        <input type="text" name="about" class="profileInp"><br><br>
+       
+        <label for="bankaccount" class="profileLabel">Bitcoin Address</label><br>
+        <input type="text" name="btc" class="profileInp"><br><br>
+        <label for="bankaccount" class="profileLabel">Bank Account Details</label><br>
+        <textarea name="bank" class="bankDetails"></textarea><br><br>
+        
+        <button id="upgrade">SUBMIT</button>
+    </form>
+
+</div>
+        
+           
+           
+           
+            <br>
+        </div>
+        </div>
+        
+           
+
+    
+
+    <%-include("./partials/footer.ejs")%>
+</body>
+</html>

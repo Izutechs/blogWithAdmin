@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Izutechs | <%=title  %> </title>
+    <link href="./css/blogStyles.css" rel="stylesheet">
+    <link href="./css/login.css" rel="stylesheet">
+</head>
+<body>
+    <h1><a href="/" class="sitetxt">Izutechs</a></h1>
+    <%-include("./partials/navbar")%>
+    
+    <br>
+    <br>
+    <div class="content">
+        <br>
+        <div class="login-form">
+            <br>
+            <h2 class="formhead">LOGIN</h2>
+            <form class="loginForm" action="/login" method="POST">
+                
+                <label for="username" class="loginLabel">Username:</label><br>
+                <input type="text" name="username" class="loginInput"><br><br>
+                <label for="author" class="loginLabel">Password:</label><br>
+                <input type="password" name="password" class="loginInput"><br>
+                <br>
+                <div class="loginFormBut">
+                    <br> 
+                <button class="loginFormButton">LOGIN</button>
+                <br><br>
+                <span class="loginLinkTxt"><a href="/forgot" class="loginLink">Forgot Password?</a> | New Here? <a href="/register" class="loginLink">Join Us</a></span>
+            </div>
+            <br>
+            </form>
+        </div>
+        <br>
+    </div>
+
+    <%-include("./partials/footer")%>
+</body>
+</html>

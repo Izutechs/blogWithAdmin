@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Izutechs | <%=title  %> </title>
+    <link href="../css/blogStyles.css" rel="stylesheet">
+    <link href="../css/profile.css" rel="stylesheet">
+</head>
+<body>
+    <h1><a href="/" class="sitetxt">Izutechs</a></h1>
+
+   
+    
+   
+       <%-include("./partials/navbar.ejs")%>
+
+  
+       <div class="userProfile">
+<h2>Terms Of Upgrade</h2>
+<span id="termsOfUpgrade">
+
+    1. each user can add post
+2. only an admin or the owner of the post can delete the post
+3. register, login and forget password
+4. comments can be added by anyone
+5. posts are sorted according to date
+6. writers can upgrade to a plan and get paid
+
+7. premium plan stays minimum of 6months
+8. payment for upgrade is N6000
+9. you get paid N1000 for posting atleast 2 articles per month
+10. If you post more than 2per month, u get paid N1200
+11. you get paid higher than N1200(i.e 1500) if you reach a minimum of 10likes per month
+12. each premium user can then vote for their most favoured and the top winners get paid more than N1500
+13. it is compulsory for each premium user to vote else you won't be paid more than 1200 per month
+14. each premium user has only 3 votes out of which one is for himself and nothing more for himself
+
+
+
+
+</span><br><br>
+<button id="upgrade" onclick="redUpgrade()">BACK</button><br><br>
+<button id="upgrade" onclick="okUpgrade()">I AGREE</button>
+       </div>
+      
+    </div>
+    
+<br>
+<%-include("./partials/footer.ejs")%>
+
+<script type="text/javascript">
+    let upgrade=document.getElementById("upgrade");
+    function redUpgrade(){
+        window.location.href="/upgradeMain"
+    }
+    function okUpgrade(){
+        window.location.href="/editProf"
+    }
+    
+    </script>
+</body>
+</html>

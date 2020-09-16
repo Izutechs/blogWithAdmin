@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Izutechs | <%=title  %> </title>
+    <link href="../css/blogStyles.css" rel="stylesheet">
+    <link href="../css/login.css" rel="stylesheet">
+</head>
+<body>
+    <%-include("./partials/navbar")%>
+    <div class="content">
+        <div class="login-form">
+            <h2 class="formhead">REGISTER</h2>
+            <form class="loginForm" action="/cp/regAdmin" method="POST">
+                
+                <label for="username" class="loginLabel">Username</label><br>
+                <input type="text" name="username" class="loginInput"><br><br>
+                <label for="email" class="loginLabel">Email</label><br>
+                <input type="email" name="email" class="loginInput"><br><br>
+                
+                <label for="author" class="loginLabel">Password</label><br>
+                <input type="password" name="password" class="loginInput"><br>
+                <br>
+                <label for="author" class="loginLabel">Confirm Password</label><br>
+                <input type="password" name="confpassword" class="loginInput"><br>
+                <br>
+                <div class="loginFormBut">
+               
+                <span class="loginLinkTxt"><a href="/cp/adminLog" class="loginLink">Don't Have An Account?  Login</a></span>
+            <br> 
+                <button class="loginFormButton">REGISTER</button>
+            
+                <!-- <br> -->
+                
+            </div>
+            <br>
+            </form>
+        </div>
+    </div>
+
+    <%-include("./partials/footer")%>
+</body>
+</html>

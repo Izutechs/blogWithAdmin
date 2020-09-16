@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Izutechs | <%=title  %> </title>
+    <link href="../css/blogStyles.css" rel="stylesheet">
+    <link href="../css/profile.css" rel="stylesheet">
+</head>
+<body>
+    <h1><a href="/" class="sitetxt">Izutechs</a></h1>
+
+   
+    
+   
+       <%-include("./partials/navbar.ejs")%>
+
+  <div class="admin"></div>
+   <%    if(signedUsers){%>
+    <%    signedUsers.forEach(user=>{%>
+            <span><a href="/cp/admin/aUser/<%=user._id%>"><%=user.username%></a></span><br>
+            <span></span>
+            <%   })%>
+            <%    }%>
+    
+    
+<br>
+
+<%-include("./partials/footer.ejs")%>
+</script>
+</body>
+</html>
+     

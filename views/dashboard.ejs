@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Izutechs | <%=title  %> </title>
+    <link href="../css/blogStyles.css" rel="stylesheet">
+    <link href="../css/profile.css" rel="stylesheet">
+</head>
+<body>
+    <h1><a href="/" class="sitetxt">Izutechs</a></h1>
+
+   
+    
+   
+    <nav class="line">
+        <br>
+        <ul class="navbar">
+        <li class="navlist"><a href="/logout" class="navlink">LOGOUT </a></li>
+        <li class="navlist"><a href="/createpost" class="navlink">WRITE AN ARTICLE</a></li>
+        <li class="navlist"><a href="/" class="navlink">HOME</a></li>
+        </ul>
+        <br>
+    </nav>
+
+  
+
+    
+    
+<br>
+     
+<div class="userProfile">
+    <div class="circle"><img class="userImg" src="./img/FB_IMG_15379748181282550.jpg"></div><br>
+   
+    <%if(premiumUser){%>
+        <span class="eachDetail">Premium Username:</span><br>
+        
+        <span class="userDetail"><%=premiumUser.username%></span><br><br>
+        <span class="eachDetail">Email:</span><br>
+        <span class="userDetail"><%=premiumUser.email%></span><br><br>
+        <span class="eachDetail">Phone Number:</span><br>
+        <span class="userDetail"><%=premiumUser.phone%></span><br><br>
+        <span class="eachDetail">Country:</span><br>
+        <span class="userDetail"><%=premiumUser.country%></span><br><br>
+        <span class="eachDetail">Bank Details:</span><br>
+        <span class="userDetail"><%=premiumUser.bankDetail%></span><br><br>
+        <span class="eachDetail">Bitcoin Address:</span><br>
+        <span class="userDetail"><%=premiumUser.btc%></span><br><br>
+        <span class="eachDetail">About:</span><br>
+        <span class="userDetail"><%=premiumUser.about%></span><br><br>
+        
+        
+        <button id="upgrade" onclick="edit()">EDIT DETAILS</button>
+   <% }else{%>
+    <span class="eachDetail">Premium Username:</span><br>
+        
+    <span class="userDetail"><%=user.username%></span><br><br>
+    <span class="eachDetail">Email:</span><br>
+    <span class="userDetail"><%=user.email%></span><br><br>
+    <span class="eachDetail">Date Created:</span><br>
+     <span class="userDetail"><%=user.createdAt%></span><br><br>
+        <button id="upgrade" onclick="redUpgrade()">UPGRADE</button>
+   <% }%>
+    
+</div>
+        
+           
+           
+           
+            <br>
+        </div>
+        </div>
+        
+           
+
+    
+
+    <%-include("./partials/footer.ejs")%>
+
+    <script type="text/javascript">
+    let upgrade=document.getElementById("upgrade");
+    function redUpgrade(){
+        window.location.href="/upgradeMain"
+    }
+    function edit(){
+        window.location.href="/editProf"
+    }
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Izutechs | <%=title  %> </title>
+    <link href="./css/blogStyles.css" rel="stylesheet">
+</head>
+<body>
+    <h1><a href="/" class="sitetxt">Izutechs</a></h1>
+
+   
+    
+   
+       <%-include("./partials/navbar.ejs")%>
+
+  
+<div id="main">
+    <h2 style="text-align: center;">Latest Posts</h2>
+    
+    <div class="leftSec">
+    <% if(blogs.length>0){ %>
+        <% blogs.forEach(blog=>{ %>
+        <div class="post">
+            <a class="bloglink" href="/blogs/<%= blog._id%>">
+            <img class="articlePic" src="./img/posts/<%=blog.postImgLink%>">
+                <h2><%=blog.title%></h2>
+            <span class="snippet"><%=blog.snippet%></span><br><br>
+        </a>
+      
+        </div>
+        <br>
+        <%})%>
+        <%}%>
+       
+    </div>
+    <div class="rightSec">
+
+        <img class="aD" src="./img/FB_IMG_15379748181282550.jpg">
+        <br>
+        <img class="aD" src="./img/FB_IMG_15379748181282550.jpg">
+    </div>
+</div>
+<br>
+<br>
+    <%-include("./partials/footer.ejs")%>
+</body>
+</html>

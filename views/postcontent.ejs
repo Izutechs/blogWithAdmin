@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Izutechs | <%=post.title  %> </title>
+    <link href="../css/blogStyles.css" rel="stylesheet">
+    <link href="../css/blogpost.css" rel="stylesheet">
+</head>
+<body>
+    <h1><a href="/" class="sitetxt">Izutechs</a></h1>
+
+   
+    
+   
+       <%-include("./partials/navbar.ejs")%>
+
+  
+
+    
+    
+<br>
+    
+<div class="postdiv">
+    <br>
+    <div class="postline">
+        <br>
+    <div class="postIm"><img src="../img/posts/<%=post.postImgLink%>" class="postImg"></div>   
+    
+        <div class="postContent">
+            <a class="delete" data-doc="<%=post._id%>">DELETE</a>
+            <h2 class="postName"><%=post.title%></h2>
+            <span class="author">By <%=author.username%></span>
+            <p class="postmain"><%=post.content%></p>
+            <div id="social">
+                <ul class="socia">
+                    <li class="socialList"><img src="../img/f1.png" class="socialIcons"></li>
+                    <li class="socialList"><img src="../img/f2.png" class="socialIcons"></li>
+                    <li class="socialList"><img src="../img/f3.png" class="socialIcons"></li>
+                    <li class="socialList"><img src="../img/f6.png" class="socialIcons"></li>
+                </ul>
+            </div>
+            <div class="commentForm">
+                <form action="/postcontent/<%=post._id%>" method="POST">
+                <label for="usernameComment" class="comLabel">Nickname: </label><br>
+                <input type="text" name="usernameComment" id="username"class="commentInp">
+                <br><br>
+                <label for="comment" class="comLabel">Comment:</label><br>
+                <textarea name="comment" class="commentInput"></textarea><br><br>
+                <button class="submitComment">Submit</button><br>
+            </form>
+            <br><br>
+           
+            <div class="lineShare"></div>
+            <br>
+
+            <div class="comments">
+                <h3 class="commentTitle">Comments</h3>
+                
+                    <%if(usersComments.length>0){%>
+                        
+                    <%usersComments.forEach(userComment=>{%>
+                        <span class="userwCom"><%=userComment.nickname%></span><br>
+                <span class="aComment"><%=userComment.comment%></span><br><br>
+                <div class="lineShare"></div>
+                <%})%>
+                <%}%>
+           
+
+                
+                   
+                
+               <br>
+            </div>
+        
+            </div>
+            <br>
+        </div>
+        </div>
+        <br>
+    </div>
+    </div>
+           
+
+    
+
+    <%-include("./partials/footer.ejs")%>
+
+    <script>
+        const trashcan=document.querySelector("a.delete");
+        trashcan.addEventListener("click", (e)=>{
+            const endpoint=`/blogs/${trashcan.dataset.doc}`;
+
+            fetch(endpoint, {
+                method: "DELETE"
+            })
+            .then((response)=>response.json())
+            .then((data)=>window.location.href=data.redirect)
+            .catch((err)=>{
+                console.log(err);
+            })
+        });
+
+    </script>
+</body>
+</html>

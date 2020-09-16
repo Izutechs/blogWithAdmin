@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Izutechs | <%=title  %> </title>
+    <link href="./css/blogStyles.css" rel="stylesheet">
+    <link href="./css/createpost.css" rel="stylesheet">
+</head>
+<body>
+    <h1><a href="/" class="sitetxt">Izutechs</a></h1>
+
+   
+    
+   
+       <%-include("./partials/navbar.ejs")%>
+       <br><br>
+       <div class="content">
+           <br>
+        <div class="blog-form">
+            <form class="blogForm" action="/createpost" method="POST" enctype="multipart/form-data">
+                <br>
+                <h2 class="formhead">ARTICLE</h2>
+        <label for="picture" class="blogLabel">Post Picture</label><br>
+        <input type="file" name="blogpicture" class="blogInput"><br><br>
+              
+        <label for="title" class="blogLabel">Title</label><br>
+        <input type="text" name="blogtitle" class="blogInput" required><br>
+        <br>
+        <label for="Snippet" class="blogLabel">Snippet</label><br>
+        
+        <input type="text" name="blogsnippet" class="blogInput" maxlength="20"><br>
+        <br>
+        <label for="content" class="blogLabel">Content</label><br>
+        <textarea name="blogcontent" class="txtara" required></textarea><br><br>
+        <div class="blogFormBut">
+        <button class="blogFormButton">POST</button><br>
+    </div>
+    <br>
+
+            </form>
+
+        </div>
+<br>
+           </div>
+       
+       <%-include("./partials/footer.ejs")%>
+   </body>
+   </html>
